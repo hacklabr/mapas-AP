@@ -9,10 +9,10 @@ return [
     'SpamDetector',
     'AdminLoginAsUser',
     'Zammad' => [
-            'namespace' => 'Zammad',
-            'config' => [
-                'url' => '',
-                'enabled' => true,
+        'namespace' => 'Zammad',
+        'config' => [
+            'url' => '',
+            'enabled' => true,
             ]
         ],
     'MapasBlame' => [
