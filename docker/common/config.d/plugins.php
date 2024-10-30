@@ -15,4 +15,12 @@ return [
                 'enabled' => true,
             ]
         ],
+    'MapasBlame' => [
+        'namespace' => 'MapasBlame',
+        'config' => [
+            'request.logData.PATCH' => function ($data) {
+                return $data;
+            },
+        ]
+    ],
 ];
