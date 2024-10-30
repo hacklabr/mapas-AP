@@ -8,6 +8,8 @@ return [
     
     'slim.debug' => true,
 
+    'themes.active' => 'MapasAp',
+
     'app.mode' => $_ENV['APP_MODE'],
 
     // deixe true somente se estiver trabalhando nos mapeamentos das entidades
