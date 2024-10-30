@@ -6,5 +6,6 @@ return [
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'SamplePlugin' => ['namespace' => 'SamplePlugin'],
     ],
-    'SpamDetector'
+    'SpamDetector',
+    'AdminLoginAsUser'
 ];
