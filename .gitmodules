@@ -13,3 +13,6 @@
 [submodule "plugins/Zammad"]
 	path = plugins/Zammad
 	url = https://github.com/mapasculturais/plugin-Zammad.git
+[submodule "plugins/MapasBlame"]
+	path = plugins/MapasBlame
+	url = https://github.com/mapasculturais/plugin-MapasBlame.git
