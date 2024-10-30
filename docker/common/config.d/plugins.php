@@ -7,5 +7,12 @@ return [
         'SamplePlugin' => ['namespace' => 'SamplePlugin'],
     ],
     'SpamDetector',
-    'AdminLoginAsUser'
+    'AdminLoginAsUser',
+    'Zammad' => [
+            'namespace' => 'Zammad',
+            'config' => [
+                'url' => '',
+                'enabled' => true,
+            ]
+        ],
 ];
