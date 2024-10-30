@@ -1,27 +1,27 @@
 <?php
 
 return [
-    'Analytics',
     'plugins' => [
+        'Analytics',
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'SamplePlugin' => ['namespace' => 'SamplePlugin'],
-    ],
-    'SpamDetector',
-    'AdminLoginAsUser',
-    'Zammad' => [
-        'namespace' => 'Zammad',
-        'config' => [
-            'url' => '',
-            'enabled' => true,
+        'SpamDetector',
+        'AdminLoginAsUser',
+        'Zammad' => [
+            'namespace' => 'Zammad',
+            'config' => [
+                'url' => '',
+                'enabled' => true,
+                ]
+            ],
+        'MapasBlame' => [
+            'namespace' => 'MapasBlame',
+            'config' => [
+                'request.logData.PATCH' => function ($data) {
+                    return $data;
+                },
             ]
         ],
-    'MapasBlame' => [
-        'namespace' => 'MapasBlame',
-        'config' => [
-            'request.logData.PATCH' => function ($data) {
-                return $data;
-            },
-        ]
+        'Accessibility',
     ],
-    'Accessibility',
 ];
