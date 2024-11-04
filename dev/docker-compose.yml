@@ -19,6 +19,7 @@ services:
       - ../themes/MapasAp:/var/www/src/themes/MapasAp
 
       - ../docker/common/config.d:/var/www/config/common.d
+      - ../docker/common/lgpd-terms:/var/www/config/lgpd-terms
       - ./config.d:/var/www/config/local.d
 
       # themes and plugins
