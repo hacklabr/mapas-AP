@@ -61,16 +61,32 @@ $home-register: #D2E288;
 // $shadow-lv-4: 0px 16px 48px rgba(0, 0, 0, 0.16);
 // $shadow-lv-1-up: 0px -4px 8px rgba(0, 0, 0, 0.16);
 
+
+@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
+
+:root {
+    --mc-home-header-gradient: linear-gradient(180deg, rgba(99, 220, 0, 0.75) 0%, rgba(99, 220, 0, 0.05) 50%), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
 .home-register__content--description  {
     color: #389F37;
 }
 
+.home-register__background--img {
+    max-width: size(250);
+}
+
 .home-register__content--title {
     color: #389F37;
-} 
+}
 
-@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
+.home-register__content {
+    max-width: size(920);
+}
 
+.home-register {
+    flex-direction: row-reverse;
+}
 
 .lgpd-document {
     border-bottom: 1px solid $black;
