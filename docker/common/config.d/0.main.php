@@ -1,4 +1,5 @@
 <?php 
+use MapasCulturais\i;
 
 return [
     'app.siteName' => 'Mapa Cultural do Amapá',
@@ -8,6 +9,14 @@ return [
     'themes.active' => 'MapasAp',
 
     // Ids dos selos verificadores. Para utilizar múltiplos selos informe os ids separados por vírgula.
-    'app.verifiedSealsIds' => '1', 
-
+    'app.verifiedSealsIds' => '1',
+    'app.geoDivisionsHierarchy' => [
+        'pais'              => ['name' => i::__('País'),            'showLayer' => true],
+        'estado'            => ['name' => i::__('Estado'),          'showLayer' => true],
+        'mesorregiao'       => ['name' => i::__('Mesorregião'),     'showLayer' => true],
+        // 'RI'  => ['name' => i::__('Região de integração'),'showLayer' => true],
+        'microrregiao'      => ['name' => i::__('Microrregião'),    'showLayer' => true],
+        'municipio'         => ['name' => i::__('Município'),       'showLayer' => true],
+    ],
+    'app.geoDivisionsFilters' => [16], 
 ];
