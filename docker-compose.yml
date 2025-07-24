@@ -15,7 +15,7 @@ services:
 
   ##### versão com ssl
       - ./docker/production/nginx-ssl.conf:/etc/nginx/conf.d/default.conf
-    #  - ./docker-data/certs/conf:/etc/letsencrypt
+      - ./certificado:/etc/letsencrypt
     #  - ./docker-data/certs/www:/var/www/certbot
     ports:
      - "80:80"
