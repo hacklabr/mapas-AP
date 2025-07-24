@@ -31,6 +31,7 @@ services:
       - ../plugins/Zammad:/var/www/src/plugins/Zammad
       - ../plugins/MapasBlame:/var/www/src/plugins/MapasBlame
       - ../plugins/Accessibility:/var/www/src/plugins/Accessibility
+      - ../em-breve:/var/www/html/em-breve
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
