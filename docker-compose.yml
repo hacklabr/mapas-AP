@@ -10,11 +10,11 @@ services:
       - ./docker-data/assets:/var/www/html/assets
 
   ##### versão sem ssl
-      - ./docker/production/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./em-breve:/var/www/html/em-breve
+      # - ./docker/production/nginx.conf:/etc/nginx/conf.d/default.conf
+      # - ./em-breve:/var/www/html/em-breve
 
   ##### versão com ssl
-    #  - ./docker/production/nginx-ssl.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/production/nginx-ssl.conf:/etc/nginx/conf.d/default.conf
     #  - ./docker-data/certs/conf:/etc/letsencrypt
     #  - ./docker-data/certs/www:/var/www/certbot
     ports:
@@ -44,15 +44,16 @@ services:
 
       - ./docker/production/config.d:/var/www/config/prod.d
     links:
-      - db
+      # - db
       - redis
       - sessions
     environment:
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
+      - OFFLINE_BYPASS=MapaAp@2025#
 
     depends_on:
-      - db
+      # - db
       - redis
       - sessions
 
@@ -68,16 +69,16 @@ services:
     volumes:
       - ./docker-data/sessions:/data
 
-  db:
-    image: postgis/postgis:14-master
-    restart: unless-stopped
-    environment:
-      - POSTGRES_PASSWORD=mapas
-      - POSTGRES_USER=mapas
-      - POSTGRES_DB=mapas
-    volumes:
-      - ./docker/db:/docker-entrypoint-initdb.d
-      - ./docker-data/db-data:/var/lib/postgresql/data
+  # db:
+  #   image: postgis/postgis:14-master
+  #   restart: unless-stopped
+  #   environment:
+  #     - POSTGRES_PASSWORD=mapas
+  #     - POSTGRES_USER=mapas
+  #     - POSTGRES_DB=mapas
+  #   volumes:
+  #     - ./docker/db:/docker-entrypoint-initdb.d
+  #     - ./docker-data/db-data:/var/lib/postgresql/data
     
 
 ## Em ambiente de homologação pode ser uma boa ideia utilizar o mailhog para testar 
