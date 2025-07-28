@@ -40,7 +40,7 @@ services:
       - ./docker-data/saas-files:/var/www/var/saas-files
       - ./docker-data/sessions:/var/www/var/sessions
       - ./docker-data/logs:/var/www/var/logs
-      - ./em-breve:/var/www/html/em-breve
+      # - ./em-breve:/var/www/html/em-breve
 
       - ./docker/production/config.d:/var/www/config/prod.d
     links:
@@ -50,7 +50,6 @@ services:
     environment:
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
-      - OFFLINE_BYPASS=MapaAp@2025#
 
     depends_on:
       # - db
